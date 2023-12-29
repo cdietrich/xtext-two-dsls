@@ -1,0 +1,9 @@
+grammar org.xtext.example.mydsla.MyDslA with org.eclipse.xtext.common.Terminals
+
+generate myDslA "http://www.xtext.org/example/mydsla/MyDslA"
+
+Model:
+	persons+=Person*;
+	
+Person:
+	'person' name=ID '!';

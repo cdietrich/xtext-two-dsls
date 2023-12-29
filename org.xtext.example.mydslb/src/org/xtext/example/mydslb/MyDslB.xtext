@@ -1,0 +1,11 @@
+grammar org.xtext.example.mydslb.MyDslB with org.eclipse.xtext.common.Terminals
+
+generate myDslB "http://www.xtext.org/example/mydslb/MyDslB"
+
+import "http://www.xtext.org/example/mydsla/MyDslA" as a
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' person=[a::Person] '!';
